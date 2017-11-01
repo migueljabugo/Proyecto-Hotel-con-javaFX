@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="background" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.vista.EstadisticaControlador">
+   <children>
+      <Label layoutX="43.0" layoutY="20.0" styleClass="titulo" text="Comprobar tasa de ocupacion entre fechas" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="89.0" text="Inicio" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="89.0" />
+      <Label layoutX="41.0" layoutY="119.0" text="Fin" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="119.0" />
+      <DatePicker fx:id="fechaInicio" layoutX="81.0" layoutY="85.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="85.0" />
+      <DatePicker fx:id="fechaFin" layoutX="81.0" layoutY="117.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="117.0" />
+      <Button layoutX="25.0" layoutY="188.0" mnemonicParsing="false" onAction="#ocupacion" prefHeight="40.0" styleClass="boton" text="Comprobar ocupación" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="188.0" />
+      <PieChart fx:id="graficoCircular" layoutX="195.0" layoutY="146.0" legendSide="LEFT" prefHeight="414.0" prefWidth="591.0" />
+      <Label fx:id="numOcupacion" layoutX="25.0" layoutY="261.0" prefHeight="245.0" prefWidth="167.0" styleClass="descripcion" />
+   </children>
+</AnchorPane>

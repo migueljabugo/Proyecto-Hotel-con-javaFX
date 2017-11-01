@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="background" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.vista.OcupacionPorMesControlador">
+   <children>
+      <BarChart fx:id="barChart" layoutY="54.0" prefHeight="377.0" prefWidth="800.0" styleClass="grafico" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label fx:id="etiquetaAnno" layoutX="382.0" layoutY="11.0" styleClass="titulo" text="Año" />
+      <Button layoutX="332.0" layoutY="11.0" mnemonicParsing="false" onAction="#restarAnno" prefHeight="30.0" prefWidth="30.0" styleClass="boton" text="-" AnchorPane.leftAnchor="332.0" />
+      <Button layoutX="443.0" layoutY="11.0" mnemonicParsing="false" onAction="#sumarAnno" prefHeight="30.0" prefWidth="30.0" styleClass="boton" text="+" AnchorPane.rightAnchor="330.0" />
+      <Pane layoutX="181.0" layoutY="419.0" prefHeight="102.0" prefWidth="457.0">
+         <children>
+            <Pane layoutX="42.0" layoutY="16.0">
+               <children>
+                  <Pane layoutX="5.0" layoutY="50.0">
+                     <children>
+                        <Label layoutX="73.0" styleClass="porcentajeOcupacion" text="Doble individual" />
+                        <Label styleClass="porcentajeOcupacion" text="Doble" />
+                        <Label layoutX="195.0" styleClass="porcentajeOcupacion" text="Junior Suite" />
+                        <Label layoutX="332.0" styleClass="porcentajeOcupacion" text="Suite" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="220.0" layoutY="429.0" AnchorPane.topAnchor="429.0">
+         <children>
+            <ProgressIndicator fx:id="juniorSuite" layoutX="214.0" minHeight="50.0" minWidth="50.0" progress="0.0" styleClass="progressIndicator" />
+            <ProgressIndicator fx:id="dobleIndividual" layoutX="107.0" minHeight="50.0" minWidth="50.0" progress="0.0" styleClass="progressIndicator" />
+            <ProgressIndicator fx:id="suite" layoutX="329.0" minHeight="50.0" minWidth="50.0" progress="0.0" styleClass="progressIndicator" />
+            <ProgressIndicator fx:id="doble" prefHeight="50.0" prefWidth="50.0" progress="0.0" styleClass="progressIndicator" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

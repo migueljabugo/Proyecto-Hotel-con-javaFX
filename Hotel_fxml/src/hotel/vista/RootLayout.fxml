@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="background" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.vista.RootLayoutControlador">
+   <top>
+      <MenuBar prefHeight="40.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Aplicación">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarNuevo" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarAbrir" text="Cargar" />
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarGuardar" text="Guardar" />
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarGuardarComo" text="Guardar como..." />
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarSalir" text="Salir" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Gestión">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cargarGestion" text="Ir a inicio" />
+                  <MenuItem mnemonicParsing="false" onAction="#cargarHabitaciones" text="Habitaciones" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Estadistica">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarEstadistica" text="Ocupacion por Fecha/Habitación" />
+                  <MenuItem mnemonicParsing="false" onAction="#verOcupacionPorMes" text="Ocupación por mes" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#pulsarDetalles" text="Acerca de..." />
+                  <MenuItem mnemonicParsing="false" onAction="#pulsarAyuda" text="Ayuda" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
